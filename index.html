@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VidyaStep | Step-by-step learning app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>VidyaStep</h1>
+      <p>Your kind AI teacher for step-by-step learning (Class 5–10).</p>
+    </header>
+
+    <main class="container">
+      <section class="card form-card">
+        <h2>Create Lesson</h2>
+        <form id="lessonForm">
+          <div class="grid">
+            <label>
+              Class
+              <input id="classInput" placeholder="e.g., 7" required />
+            </label>
+            <label>
+              Subject
+              <input id="subjectInput" placeholder="e.g., Science" required />
+            </label>
+            <label>
+              Topic
+              <input id="topicInput" placeholder="e.g., Photosynthesis" required />
+            </label>
+            <label>
+              Language
+              <input id="languageInput" placeholder="e.g., English" required />
+            </label>
+          </div>
+          <div class="actions">
+            <button type="submit">Generate Content</button>
+            <button type="button" id="unlockBtn" class="secondary">Unlock Practice</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card" id="outputCard" hidden>
+        <h2 id="lessonTitle"></h2>
+
+        <article>
+          <h3>A. Concept Explanation (Free)</h3>
+          <p id="conceptText"></p>
+          <ol id="stepList"></ol>
+          <p><strong>Real-life example:</strong> <span id="exampleText"></span></p>
+          <p><strong>Check understanding:</strong> <span id="checkQuestion"></span></p>
+        </article>
+
+        <article>
+          <h3>B. Practice Section (Paid)</h3>
+          <div id="paywall" class="paywall">
+            <p>Practice helps learning become strong.</p>
+            <p>Unlock to continue and build confidence.</p>
+          </div>
+          <div id="practiceContent" hidden>
+            <ol id="practiceList"></ol>
+            <h4>Answers</h4>
+            <ol id="answerList"></ol>
+          </div>
+        </article>
+
+        <article>
+          <h3>C. Encouraging Feedback</h3>
+          <p id="feedbackText"></p>
+        </article>
+
+        <article>
+          <h3>E. Parent Progress Message</h3>
+          <p id="parentMessage"></p>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
